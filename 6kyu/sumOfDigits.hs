@@ -1,7 +1,9 @@
 module DigitalRoot where
 
 digitalRoot :: Integral a => a -> a
-digitalRoot = undefined
+digitalRoot n
+  | n < 10 = n
+  | otherwise = digitalRoot $ digits n
 
 modTen :: Integral a => a -> a
 modTen = (`mod` 10)
